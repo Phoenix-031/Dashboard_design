@@ -1,35 +1,183 @@
+@import '../../../../../../styles/breakpoints';
+
 .security_maincontainer {
     // border: 1px solid red;
     flex: 8;
-    // height: 100%;
     width: 100%;
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &>.security_sectionone {
         padding: 2rem 1rem;
         // border: 7px solid green;
+        overflow-x: hidden;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: baseline;
-    }
+        flex: 1;
 
-    &>.security_sectionone>div {
-        // border: 1px solid blue;
-        border: 1px solid gray;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: max-content;
-        gap: 1.5rem;
-        border-radius: 1rem;
-        padding: 1rem;
+        &>div {
+            // border: 1px solid blue;
+            border: 1px solid gray;
+            border-width: 0 0 1px 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            gap: 1.2rem;
+            padding: 1rem;
 
-        &>div:first-child {
-            font-size: 1.5rem;
+            &>div:first-child {
+                font-size: 1rem;
+                align-content: baseline;
+                // border: 1px solid red;
+                height: 100%;
+            }
         }
+
     }
 
+    &>.security_sectiontwo {
+        border: 1px solid blue;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 1rem;
+        overflow-x: hidden;
+        gap: 0.5rem;
+
+        &>.passwordlength_card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 100%;
+            padding: 1.2rem 0;
+            border: 1px solid gray;
+            border-width: 0 0 1px 0;
+
+            &>div:first-child {
+                font-size: 1.5rem;
+                flex: 1;
+            }
+
+            &>div:last-child {
+                padding: 0.5rem 0.9rem;
+                border: 1px solid gray;
+                border-radius: 0.2rem;
+            }
+
+            &>.passwordlength_section {
+                flex: 12;
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0 0.5rem;
+
+                &>p {
+                    font-family: Poppins, sans-serif;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &>.privatemessage_card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 100%;
+
+            &>div:first-child {
+                font-size: 1.5rem;
+                flex: 1;
+            }
+
+            &>.privatemessage_card_section {
+                border: 1px solid gray;
+                border-width: 0 0 1px 0;
+                flex: 12;
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0 0.5rem;
+
+                &>p {
+                    font-family: Poppins, sans-serif;
+                    font-size: 1rem;
+                }
+
+                &>div {
+                    display: flex;
+                    // justify-content: flex-start;
+                    // align-items: baseline;
+                    gap: 1rem;
+                    padding: 0.5rem 0;
+
+                    &>p {
+                        border: 1px solid gray;
+                        padding: 0.2rem 0.8rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+
+        &>.visibility_card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 100%;
+
+            &>div:first-child {
+                font-size: 1.5rem;
+                flex: 1;
+            }
+
+            &>.visibility_card_section {
+                border: 1px solid gray;
+                border-width: 0 0 1px 0;
+                flex: 12;
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0 0.5rem;
+
+                &>div {
+                    display: flex;
+                    gap: 1rem;
+                    padding: 0.5rem 0;
+
+                    &>p {
+                        border: 1px solid gray;
+                        padding: 0.2rem 0.8rem;
+                        border-radius: 1rem;
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+
+}
+
+@include desktop {
+    .security_maincontainer {
+        flex: 1;
+        flex-direction: column;
+    }
 }
