@@ -1,48 +1,66 @@
 
-// import styles from './style.module.scss'
+import styles from './style.module.scss'
+
+//icons
+import { FaRegUser } from "react-icons/fa";
+import { IoChatbubbleEllipses } from "react-icons/io5";
+import { SlCalender } from "react-icons/sl";
+import { TbCardsFilled } from "react-icons/tb";
+import { IoSettings } from "react-icons/io5";
+
+// assets
+import userIcon from '@assets/profile.jpeg'
 
 const Sidesection = () => {
   return (
-    <div>
-        <div className='sidebar_heading'>
+    <div className={styles.sidebar_container}>
+        <div className={styles.sidebar_heading}>
             <img src="" alt="" />
             <span>TechHazel</span>
         </div>
 
-        <div className="sidebar_userinfo">
-            <img src="" alt="" />
-            <span></span>
-            <span></span>
+        <div className={styles.sidebar_userinfo}>
+            <div className={styles.sidebar_userinfo_imgcontainer}>
+                <img src={userIcon} alt="User image" />
+            </div>
+            <span>Catherine Reed</span>
+            <span>Admin</span>
         </div>
 
-        <ul className="sidebar_menu">
+        <ul className={styles.sidebar_menu}>
             <li>
-                <img src="" alt="" />
+                <FaRegUser />
                 <span>Profile</span>
             </li>
             <li>
-                <img src="" alt="" />
-                <span>Profile</span>
+                <IoChatbubbleEllipses />
+                <span>Chat</span>
             </li>
             <li>
-                <img src="" alt="" />
-                <span>Profile</span>
+                <SlCalender />
+                <span>Calendar</span>
             </li>
             <li>
-                <img src="" alt="" />
-                <span>Profile</span>
+                <TbCardsFilled />
+                <span>Offers</span>
             </li>
             <li>
-                <img src="" alt="" />
-                <span>Profile</span>
+                <IoSettings />
+                <span>Settings</span>
             </li>
         </ul>
 
-        <div className="sidebar_community_section_container">
-            <div className="sidebar_community_members">
-                <img src="" alt="" />
+        <div className={styles.sidebar_community_section_container}>
+            <div className={styles.sidebar_community_members}>
+                {/* <ul> */}
+                <img src={userIcon} alt="User image" />
+                <img src={userIcon} alt="User image" />
+                <img src={userIcon} alt="User image" />
+                <img src={userIcon} alt="User image" />
+                <img src={userIcon} alt="User image" />
+                {/* </ul> */}
             </div>
-            <p className="sidebar_community_section_text">Find new members in our community</p>
+            <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
         </div>
     </div>
   )
