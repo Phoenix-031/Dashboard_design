@@ -1,0 +1,26 @@
+.topbar_main_container {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    // border: 1px solid red;
+
+    &>.topbar_searchicon {
+        font-size: 1.5rem;
+    }
+
+    &>.topbar_search_field {
+        // border: 1px solid red;
+        width: 60%;
+        padding: 1rem;
+        background-color: floralwhite;
+    }
+
+    &>.topbar_icons_container {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.5rem;
+    }
+}

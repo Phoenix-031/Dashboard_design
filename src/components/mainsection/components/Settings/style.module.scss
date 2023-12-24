@@ -1,0 +1,53 @@
+.settings_main_container {
+    // border: 5px solid green;
+    flex: 12;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    &>.settings_header {
+        font-size: 2rem;
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        padding: 1rem 3rem;
+        flex: 1;
+    }
+
+    &>.settings_base_section {
+        // border: 1px solid black;
+        width: 100%;
+        font-family: Poppins, sans-serif;
+        flex: 8;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+
+        &>.settings_list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1.5rem;
+            flex: 1;
+
+            &>li:nth-child(2) {
+                color: red;
+            }
+
+        }
+    }
+
+    &>.settings_session_section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        border: 1px solid red;
+    }
+}
