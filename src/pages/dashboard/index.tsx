@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from './style.module.scss'
 import Mainsection from '@/components/mainsection'
 import Sidesection from '@/components/sidesection'
