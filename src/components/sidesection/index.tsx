@@ -15,28 +15,32 @@ import { CiLogout } from "react-icons/ci";
 //library imports
 import { useContext } from 'react';
 
+
 // assets
 import userIcon from '@assets/profile.jpeg'
 import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
-import { LuEggFried } from 'react-icons/lu';
+// import { LuEggFried } from 'react-icons/lu';
 
 
 const Sidesection = () => {
 
     const {toggle,setToggle}= useContext(ToggleContext) as ToggleContextType
 
-        const style = {
-            togglestyle :{
-        display: toggle ? 'block' : 'none',
-        position: toggle ? 'fixed' : 'relative',
-        top : toggle ? '0' : '0',
-        left : toggle ? '0' : '0',
-        zindex: toggle ? '1' : '0',
-            }
+
+    const style = {
+        togglestyle :{
+            display: toggle ? 'block' : 'none',
+            position: toggle ? 'fixed' : 'relative',
+            top: toggle ? '0' : '0',
+            left: toggle ? '0' : '0',
+            zIndex: toggle ? '1' : '0',
+        }
     }
 
+
   return (
-        <div className={styles.sidebar_container} style={style.togglestyle}>
+
+        <div className={styles.sidebar_container} style={style.togglestyle as React.CSSProperties}>
             <div className={styles.sidebar_heading}>
                 <img src="" alt="" />
                 <span>TechHazel</span>
