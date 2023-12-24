@@ -49,12 +49,13 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 0.5rem;
+        // padding: 0.5rem;
         width: 100%;
-        border: 1px solid red;
+        // border: 1px solid red;
         overflow-x: scroll;
         overflow-y: hidden;
         gap: 1rem;
+        margin-bottom: 1rem;
     }
 }
 

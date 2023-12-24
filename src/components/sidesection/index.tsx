@@ -11,10 +11,17 @@ import { IoSettings } from "react-icons/io5";
 import { IoAddCircle } from "react-icons/io5";
 
 
+//library imports
+
+// import { useState } from 'react';
+
 // assets
 import userIcon from '@assets/profile.jpeg'
 
 const Sidesection = () => {
+
+    // const [selected, setSelected] = useState('Profile')
+    
   return (
     <div className={styles.sidebar_container}>
         <div className={styles.sidebar_heading}>

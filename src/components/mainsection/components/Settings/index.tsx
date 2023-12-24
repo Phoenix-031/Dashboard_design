@@ -1,12 +1,20 @@
+
+import { useState } from 'react'
+
 import SessionCards from '../SessionCards'
 import Basic from './components/Basic'
 import Notification from './components/Notification'
 import Privacy from './components/Privacy'
 import SecuriyComponent from './components/Security'
-import styles from './style.module.scss'
-import colors from '../../../../styles/_colors.scss'
 
-import { useState } from 'react'
+import styles from './style.module.scss'
+import style1 from '../SessionCards/style.module.scss'
+
+import { FaApple } from "react-icons/fa";
+import { IoLogoStackoverflow } from "react-icons/io5";
+import { FaSafari } from "react-icons/fa6";
+// import safariIcon from '@assets/safari.png'
+// import stackoverflowIcon from '@assets/stackoverflow.png'
 
 const SettingsSection = () => {
 
@@ -32,9 +40,65 @@ const SettingsSection = () => {
         </div>
 
         <div className={styles.settings_session_section}>
-            <SessionCards />
-            <SessionCards />
-            <SessionCards />
+            <SessionCards>
+                <div>
+                    <FaApple />
+                </div>
+
+                <div className={style1.content_container}>
+                    <div>
+                    <div>
+                        <p>IOS</p>
+                        <p>Top platform</p>
+                    </div>
+                    </div>
+
+                    <div>
+                    <p>Active sessions</p>
+                    <p>14</p>
+                    </div>
+                </div>
+            </SessionCards>
+
+            <SessionCards>
+                <div>
+                    <FaSafari />
+                </div>
+
+                <div className={style1.content_container}>
+                    <div>
+                    <div>
+                        <p>Safari</p>
+                        <p>Top platform</p>
+                    </div>
+                    </div>
+
+                    <div>
+                    <p>Active sessions</p>
+                    <p>14</p>
+                    </div>
+                </div>
+            </SessionCards>
+
+            <SessionCards>
+                <div>
+                    <IoLogoStackoverflow />
+                </div>
+
+                <div className={style1.content_container}>
+                    <div>
+                    <div>
+                        <p>Stackoverflow</p>
+                        <p>Top platform</p>
+                    </div>
+                    </div>
+
+                    <div>
+                    <p>Active sessions</p>
+                    <p>14</p>
+                    </div>
+                </div>
+            </SessionCards>
         </div>
     </div>
   )

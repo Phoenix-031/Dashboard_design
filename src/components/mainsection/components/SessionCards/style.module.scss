@@ -10,8 +10,9 @@
     border: 1rem;
     background-color: $secondary;
     gap: 0.5rem;
-    border: 1px solid red;
-    border-radius: 1rem;
+    // border: 1px solid red;
+    border-radius: 0.9rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     &>div:first-child {
         font-size: 2rem;
@@ -29,7 +30,7 @@
 
         &>div>div>p:first-child {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
 
         &>div>div>p:nth-child(2) {
@@ -37,11 +38,25 @@
             font-size: 0.8rem;
         }
 
+        &>div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        &>div:nth-child(2)>p:nth-child(1) {
+            font-size: 0.9rem;
+        }
+
         &>div:nth-child(2)>p:nth-child(2) {
             font-weight: 600;
             font-size: 0.8rem;
-
         }
+    }
+
+    &>div:last-child {
+        font-size: 1.2rem;
     }
 }
 
