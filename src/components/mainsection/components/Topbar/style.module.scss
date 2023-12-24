@@ -11,8 +11,16 @@
     color: $tertiary;
     // border: 1px solid red;
 
-    &>.topbar_searchicon {
+    &>.topbar_searchicon_container {
         font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.9rem;
+
+        &>p:first-child {
+            display: none;
+        }
     }
 
     &>.topbar_search_field {
@@ -32,7 +40,7 @@
 
 @include sm {
     .topbar_main_container {
-        &>.topbar_searchicon {
+        &>.topbar_searchicon_container {
             font-size: 1rem;
         }
 
@@ -42,6 +50,16 @@
 
         &>.topbar_icons_container {
             font-size: 1rem;
+        }
+    }
+}
+
+@include mobile {
+    .topbar_main_container {
+        &>.topbar_searchicon_container {
+            &>p:first-child {
+                display: block;
+            }
         }
     }
 }

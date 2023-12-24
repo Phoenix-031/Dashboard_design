@@ -22,6 +22,14 @@
         font-weight: 600;
         padding: 2rem 0;
         font-style: Poppins, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+
+        &>p {
+            display: none;
+        }
     }
 
     &>.sidebar_userinfo {
@@ -137,5 +145,11 @@
 @include tablet {
     .sidebar_container {
         grid-column: 1/5;
+
+        &>.sidebar_heading {
+            &>p {
+                display: block;
+            }
+        }
     }
 }
