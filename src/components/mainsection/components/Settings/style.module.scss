@@ -1,3 +1,5 @@
+@import '../../../../styles/colors';
+
 .settings_main_container {
     // border: 5px solid green;
     flex: 12;
@@ -6,6 +8,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
+    color: $tertiary;
 
     &>.settings_header {
         font-size: 2rem;
@@ -44,11 +47,14 @@
     &>.settings_session_section {
         flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        padding: 1rem;
+        padding: 0.5rem;
         width: 100%;
         border: 1px solid red;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 1rem;
     }
 }
 

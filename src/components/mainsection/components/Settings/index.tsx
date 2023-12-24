@@ -4,18 +4,13 @@ import Notification from './components/Notification'
 import Privacy from './components/Privacy'
 import SecuriyComponent from './components/Security'
 import styles from './style.module.scss'
+import colors from '../../../../styles/_colors.scss'
 
 import { useState } from 'react'
 
 const SettingsSection = () => {
 
     const [selected, setSelected] = useState('Basic')
-
-    const style= {
-        text:{
-            color : selected==='Basic' ? '#000' : '#8E8E8E'
-        }
-    }
     
   return (
     <div className={styles.settings_main_container}>
@@ -23,10 +18,10 @@ const SettingsSection = () => {
 
         <div className={styles.settings_base_section}>
             <ul className={styles.settings_list}>
-                <li onClick={() => setSelected('Basic')} style={selected === 'Basic'? {color : 'red'} : {color:'black'}}>Basic</li>
-                <li onClick={() => setSelected('Security')} style={selected === 'Security'? {color : 'red'} : {color:'black'}}>Security</li>
-                <li onClick={() => setSelected('Notification')} style={selected === 'Notification'? {color : 'red'} : {color:'black'}}>Notification</li>
-                <li onClick={() => setSelected('Privacy')} style={selected === 'Privacy'? {color : 'red'} : {color:'black'}}>Privacy</li>
+                <li onClick={() => setSelected('Basic')} style={selected === 'Basic'? {color : '#444BB6'} : {color:'black'}}>Basic</li>
+                <li onClick={() => setSelected('Security')} style={selected === 'Security'? {color : '#444BB6'} : {color:'black'}}>Security</li>
+                <li onClick={() => setSelected('Notification')} style={selected === 'Notification'? {color : '#444BB6'} : {color:'black'}}>Notification</li>
+                <li onClick={() => setSelected('Privacy')} style={selected === 'Privacy'? {color : '#444BB6'} : {color:'black'}}>Privacy</li>
             </ul>
 
             {selected==='Basic' && <Basic/>}
@@ -37,6 +32,8 @@ const SettingsSection = () => {
         </div>
 
         <div className={styles.settings_session_section}>
+            <SessionCards />
+            <SessionCards />
             <SessionCards />
         </div>
     </div>

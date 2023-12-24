@@ -1,4 +1,5 @@
 @import '../../styles/breakpoints';
+@import '../../styles/colors';
 
 .main_section_container {
     // border: 2px solid red;
@@ -9,6 +10,7 @@
     width: 100%;
     grid-column: 3/13;
     overflow-y: scroll;
+    color: $tertiary;
 }
 
 @include sm {

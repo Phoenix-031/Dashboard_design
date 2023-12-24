@@ -8,6 +8,9 @@ import { SlCalender } from "react-icons/sl";
 import { TbCardsFilled } from "react-icons/tb";
 import { IoSettings } from "react-icons/io5";
 
+import { IoAddCircle } from "react-icons/io5";
+
+
 // assets
 import userIcon from '@assets/profile.jpeg'
 
@@ -57,7 +60,9 @@ const Sidesection = () => {
                 <img src={userIcon} alt="User image" />
                 <img src={userIcon} alt="User image" />
                 <img src={userIcon} alt="User image" />
-                <img src={userIcon} alt="User image" />
+                <div>
+                    <IoAddCircle />
+                </div>
                 {/* </ul> */}
             </div>
             <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
