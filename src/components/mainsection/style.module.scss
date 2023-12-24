@@ -4,15 +4,29 @@
     // border: 2px solid red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 100%;
     grid-column: 3/13;
+    overflow-y: scroll;
+}
+
+@include sm {
+    .main_section_container {
+        border: 1px solid green;
+        grid-column: 1/13;
+    }
+
+}
+
+@include mobile {
+    .main_section_container {
+        grid-column: 1/13;
+    }
 }
 
 @include tablet {
     .main_section_container {
-        grid-column: 1/13;
+        grid-column: 5/13;
     }
 }

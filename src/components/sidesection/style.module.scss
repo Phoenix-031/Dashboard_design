@@ -10,6 +10,7 @@
     align-items: baseline;
     padding: 0.3rem;
     grid-column: 1/3;
+    overflow: hidden;
 
     &>.sidebar_heading {
         width: 100%;
@@ -120,8 +121,15 @@
 //     }
 // }
 
-@include tablet {
+@include mobile {
     .sidebar_container {
         display: none;
+        // width: 100%;
+    }
+}
+
+@include tablet {
+    .sidebar_container {
+        grid-column: 1/5;
     }
 }

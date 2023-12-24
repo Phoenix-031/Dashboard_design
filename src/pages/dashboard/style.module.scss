@@ -1,31 +1,24 @@
 @import '../../styles/breakpoints';
 
 .main_container {
-    // border: 2px solid red;
+    border: 2px solid red;
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(1fr, 12);
-    // grid-template-rows: 1fr 1fr;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
+    overflow: hidden;
 }
 
-@include xs {
+@include sm {
     .main_container {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 }
 
 @include mobile {
     .main_container {
         overflow-x: hidden;
-        grid-template-columns: 1fr;
-    }
-}
-
-@include tablet {
-    .main_container {
-        grid-template-columns: 4fr 8fr;
     }
 }
