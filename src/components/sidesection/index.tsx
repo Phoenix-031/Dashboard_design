@@ -27,6 +27,8 @@ interface SidebarMenuItemProps {
     label: string;
     selected?: string | null;
     setSelected: React.Dispatch<React.SetStateAction<string>>;
+    toggle: boolean;
+    setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 interface SidebarHeadingProps {
@@ -60,11 +62,11 @@ const SideSection = () => {
             <UserInfo userName="Catherine Reed" role="Admin" userIcon={userIcon} />
 
             <ul className={styles.sidebar_menu}>
-                <SidebarMenuItem icon={<FaRegUser />} label="Profile" selected={selected} setSelected={setSelected} />
-                <SidebarMenuItem icon={<IoChatbubbleEllipses />} label="Chat" selected={selected} setSelected={setSelected}/>
-                <SidebarMenuItem icon={<SlCalender />} label="Calendar" selected={selected} setSelected={setSelected}/>
-                <SidebarMenuItem icon={<TbCardsFilled />} label="Offers" selected={selected} setSelected={setSelected}/>
-                <SidebarMenuItem icon={<IoSettings />} label="Settings" selected={selected} setSelected={setSelected}/>
+                <SidebarMenuItem icon={<FaRegUser />} label="Profile" selected={selected} setSelected={setSelected}  toggle={toggle} setToggle={setToggle}/>
+                <SidebarMenuItem icon={<IoChatbubbleEllipses />} label="Chat" selected={selected} setSelected={setSelected} toggle={toggle} setToggle={setToggle}/>
+                <SidebarMenuItem icon={<SlCalender />} label="Calendar" selected={selected} setSelected={setSelected} toggle={toggle} setToggle={setToggle}/>
+                <SidebarMenuItem icon={<TbCardsFilled />} label="Offers" selected={selected} setSelected={setSelected} toggle={toggle} setToggle={setToggle}/>
+                <SidebarMenuItem icon={<IoSettings />} label="Settings" selected={selected} setSelected={setSelected} toggle={toggle} setToggle={setToggle}/>
             </ul>
 
 
@@ -94,14 +96,20 @@ const UserInfo = ({ userName, role, userIcon } : UserInfoProps) => (
   </div>
 );
 
-const SidebarMenuItem = ({ icon, label, setSelected,selected }:SidebarMenuItemProps) => (
+const SidebarMenuItem = ({ icon, label, setSelected,selected, toggle,setToggle }:SidebarMenuItemProps) => (
   <li onClick={() => {
     setSelected(label)
+    if(toggle){
+        setToggle(false)
+    }
   }}>
     {icon}
-    <span style={{
-                color: selected === label ? '#444BB6' : 'black',
-              }}>{label}</span>
+    <span 
+    style={{
+        color: selected === label ? '#444BB6' : 'black',
+      }}>
+        {label}
+    </span>
   </li>
 );
 
