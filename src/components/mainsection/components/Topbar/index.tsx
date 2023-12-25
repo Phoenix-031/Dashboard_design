@@ -26,10 +26,12 @@ const TopBar = () => {
             <p onClick={handleToggle}><GiHamburgerMenu /></p>
             <p><IoSearch /></p>
         </div>
+
         <input className={styles.topbar_search_field}
         type="text"
          placeholder="Search something..."
          />
+         
         <div className={styles.topbar_icons_container}>
             <LuBellRing />
             <LuArrowRightSquare />

@@ -2,7 +2,7 @@ import SettingsSection from './components/Settings'
 import TopBar from './components/Topbar'
 import styles from './style.module.scss'
 
-const Mainsection = () => {
+const MainSection = () => {
   return (
     <div className={styles.main_section_container}>
       <TopBar />
@@ -11,4 +11,4 @@ const Mainsection = () => {
   )
 }
 
-export default Mainsection
+export default MainSection

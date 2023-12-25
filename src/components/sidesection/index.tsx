@@ -19,34 +19,23 @@ import { useContext } from 'react';
 // assets
 import userIcon from '@assets/profile.jpeg'
 import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
-// import { LuEggFried } from 'react-icons/lu';
 
-
-const Sidesection = () => {
+const SideSection = () => {
 
     const {toggle,setToggle}= useContext(ToggleContext) as ToggleContextType
-
-
-    const style = {
-        togglestyle :{
-            display: toggle ? 'block' : 'none',
-            position: toggle ? 'fixed' : 'relative',
-            top: toggle ? '0' : '0',
-            left: toggle ? '0' : '0',
-            zIndex: toggle ? '1' : '0',
-        }
-    }
-
-
+    console.log(toggle)
   return (
 
-        <div className={styles.sidebar_container} style={style.togglestyle as React.CSSProperties}>
+        <div className={`${styles.sidebar_container} 
+                         ${toggle ? styles['toggle']: ''}`
+                        }>
             <div className={styles.sidebar_heading}>
                 <img src="" alt="" />
                 <span>TechHazel</span>
                 <p onClick={() =>  {
                     setToggle(false)
-                }}>
+                }}
+                >
                     <CiLogout />
                 </p>
             </div>
@@ -84,7 +73,6 @@ const Sidesection = () => {
 
             <div className={styles.sidebar_community_section_container}>
                 <div className={styles.sidebar_community_members}>
-                    {/* <ul> */}
                     <img src={userIcon} alt="User image" />
                     <img src={userIcon} alt="User image" />
                     <img src={userIcon} alt="User image" />
@@ -92,7 +80,6 @@ const Sidesection = () => {
                     <div>
                         <IoAddCircle />
                     </div>
-                    {/* </ul> */}
                 </div>
                 <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
             </div>
@@ -100,4 +87,4 @@ const Sidesection = () => {
   )
 }
 
-export default Sidesection
+export default SideSection

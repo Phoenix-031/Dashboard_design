@@ -1,6 +1,9 @@
+//components
+import MainSection from '@/components/mainsection'
+import SideSection from '@/components/sidesection'
+
+//styelesheet
 import styles from './style.module.scss'
-import Mainsection from '@/components/mainsection'
-import Sidesection from '@/components/sidesection'
 
 //context provider
 import ToggleContextProvider from '@/context/ToggleContext'
@@ -9,8 +12,8 @@ const Dashboard = () => {
   return (
     <div className={styles.main_container}>
       <ToggleContextProvider>
-          <Sidesection />
-          <Mainsection />
+          <SideSection />
+          <MainSection />
       </ToggleContextProvider>
     </div>
   )

@@ -3,21 +3,25 @@ import React, { createContext } from "react";
 import { useState } from "react";
 
 export interface ToggleContextType {
-    toggle : boolean,
-    setToggle : React.Dispatch<React.SetStateAction<boolean>>,
+    toggle: boolean,
+    setToggle: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+interface ToggleContextProviderProps {
+    children: React.ReactNode
 }
 
 export const ToggleContext = createContext<ToggleContextType | null>(null);
 
-const ToggleContextProvider = ({ children } : {children : React.ReactNode}) => {
+const ToggleContextProvider = ({ children }:ToggleContextProviderProps ) => {
 
-    const [toggle,setToggle] = useState<boolean>(false)
-    
-    return(
-        <ToggleContext.Provider value={{toggle,setToggle}}>
+    const [toggle, setToggle] = useState(false)
+
+    return (
+        <ToggleContext.Provider value={{toggle, setToggle}}>
             {children}
         </ToggleContext.Provider>
-    )   
+    )
 }
 
 export default ToggleContextProvider
