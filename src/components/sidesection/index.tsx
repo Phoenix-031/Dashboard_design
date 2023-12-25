@@ -44,13 +44,6 @@ interface UserInfoProps {
 const SideSection = () => {
 
     const {toggle,setToggle,selected,setSelected}= useContext(ToggleContext) as ToggleContextType
-    // console.log(toggle)
-    // const screenWidth = window.innerWidth;
-    // useEffect(() => {
-    //     if (screenWidth > 768) {
-    //         setToggle(false)
-    //     }
-    // }, [screenWidth,toggle])
 
   return (
 

@@ -108,20 +108,20 @@ const securityCardData = [
   },
   {
     icon: <AiOutlineStop />,
-    title: 'Require to change password',
-    description: 'Require a password change for new accounts',
+    title: 'Re-passworrds ban',
+    description: 'Ban on the use of re-passwords',
     switchChecked: false,
   },
   {
     icon: <IoLocation />,
-    title: 'Require to change password',
-    description: 'Require a password change for new accounts',
+    title: 'Allow use location',
+    description: 'Allow application to use your location',
     switchChecked: false,
   },
   {
     icon: <FaUserFriends />,
-    title: 'Require to change password',
-    description: 'Require a password change for new accounts',
+    title: 'Allow pubic profile',
+    description: 'Allow everyone to see your profile',
     switchChecked: false,
   },
 ];
