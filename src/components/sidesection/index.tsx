@@ -20,6 +20,23 @@ import { useContext } from 'react';
 import userIcon from '@assets/profile.jpeg'
 import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
 
+//interface
+
+interface SidebarMenuItemProps {
+    icon: React.ReactNode;
+    label: string;
+}
+
+interface SidebarHeadingProps {
+    onLogout: () => void;
+}
+
+interface UserInfoProps {
+    userName: string;
+    role: string;
+    userIcon: string;
+}
+
 const SideSection = () => {
 
     const {toggle,setToggle}= useContext(ToggleContext) as ToggleContextType
@@ -29,62 +46,64 @@ const SideSection = () => {
         <div className={`${styles.sidebar_container} 
                          ${toggle ? styles['toggle']: ''}`
                         }>
-            <div className={styles.sidebar_heading}>
-                <img src="" alt="" />
-                <span>TechHazel</span>
-                <p onClick={() =>  {
-                    setToggle(false)
-                }}
-                >
-                    <CiLogout />
-                </p>
-            </div>
 
-            <div className={styles.sidebar_userinfo}>
-                <div className={styles.sidebar_userinfo_imgcontainer}>
-                    <img src={userIcon} alt="User image" />
-                </div>
-                <span>Catherine Reed</span>
-                <span>Admin</span>
-            </div>
+            <SidebarHeading onLogout={() => setToggle(false)} />
+            <UserInfo userName="Catherine Reed" role="Admin" userIcon={userIcon} />
 
             <ul className={styles.sidebar_menu}>
-                <li>
-                    <FaRegUser />
-                    <span>Profile</span>
-                </li>
-                <li>
-                    <IoChatbubbleEllipses />
-                    <span>Chat</span>
-                </li>
-                <li>
-                    <SlCalender />
-                    <span>Calendar</span>
-                </li>
-                <li>
-                    <TbCardsFilled />
-                    <span>Offers</span>
-                </li>
-                <li>
-                    <IoSettings />
-                    <span>Settings</span>
-                </li>
+                <SidebarMenuItem icon={<FaRegUser />} label="Profile" />
+                <SidebarMenuItem icon={<IoChatbubbleEllipses />} label="Chat" />
+                <SidebarMenuItem icon={<SlCalender />} label="Calendar" />
+                <SidebarMenuItem icon={<TbCardsFilled />} label="Offers" />
+                <SidebarMenuItem icon={<IoSettings />} label="Settings" />
             </ul>
 
-            <div className={styles.sidebar_community_section_container}>
-                <div className={styles.sidebar_community_members}>
-                    <img src={userIcon} alt="User image" />
-                    <img src={userIcon} alt="User image" />
-                    <img src={userIcon} alt="User image" />
-                    <img src={userIcon} alt="User image" />
-                    <div>
-                        <IoAddCircle />
-                    </div>
-                </div>
-                <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
-            </div>
+
+      <SidebarCommunitySection />
+
         </div>
   )
 }
+
+const SidebarHeading = ({ onLogout } : SidebarHeadingProps) => (
+  <div className={styles.sidebar_heading}>
+    <img src="" alt="" />
+    <span>TechHazel</span>
+    <p onClick={onLogout}>
+      <CiLogout />
+    </p>
+  </div>
+);
+
+const UserInfo = ({ userName, role, userIcon } : UserInfoProps) => (
+  <div className={styles.sidebar_userinfo}>
+    <div className={styles.sidebar_userinfo_imgcontainer}>
+      <img src={userIcon} alt="User image" />
+    </div>
+    <span>{userName}</span>
+    <span>{role}</span>
+  </div>
+);
+
+const SidebarMenuItem = ({ icon, label }:SidebarMenuItemProps) => (
+  <li>
+    {icon}
+    <span>{label}</span>
+  </li>
+);
+
+const SidebarCommunitySection = () => (
+  <div className={styles.sidebar_community_section_container}>
+    <div className={styles.sidebar_community_members}>
+      {[...Array(4)].map((_, index) => (
+        <img key={index} src={userIcon} alt={`User ${index + 1}`} />
+      ))}
+      <div>
+        <IoAddCircle />
+      </div>
+    </div>
+    <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
+  </div>
+);
 
 export default SideSection
