@@ -1,10 +1,9 @@
 
+import styles from './style.module.scss'
+
 const Privacy = () => {
   return (
-    <div style={{
-      flex: 8,
-      width: '100%',
-    }}>Privacy</div>
+    <div className={styles.main_container}>Privacy</div>
   )
 }
 

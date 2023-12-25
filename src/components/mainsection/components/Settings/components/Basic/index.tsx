@@ -1,10 +1,8 @@
+import styles from './style.module.scss'
 
 const Basic = () => {
   return (
-    <div style={{
-      flex: 8,
-      width: '100%',
-    }}>Basic</div>
+    <div className={styles.main_container}>Basic</div>
   )
 }
 
