@@ -35,6 +35,21 @@
         display: flex;
         gap: 1rem;
         font-size: 1.5rem;
+
+        span {
+            position: relative;
+        }
+
+        span:first-child::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $action_notify;
+            border-radius: 50%;
+        }
     }
 }
 

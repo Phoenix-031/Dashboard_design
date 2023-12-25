@@ -136,12 +136,36 @@
         padding: 4rem 0;
         padding-top: 1rem;
 
+        &>li:nth-child(2)>span::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $action_notify;
+            border-radius: 50%;
+        }
+
+        &>li:nth-child(3)>span::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $action_notify;
+            border-radius: 50%;
+        }
+
         &>li {
             display: flex;
             gap: 1rem;
             align-items: baseline;
             font-size: 1.2rem;
             cursor: pointer;
+            // border: 1px solid red;
+            position: relative;
 
             &:nth-child(n) {
                 padding: 0 1.8rem;

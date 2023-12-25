@@ -11,6 +11,10 @@ import { IoLocation } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
 import { RiChatPrivateFill } from "react-icons/ri";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { FaGreaterThan } from "react-icons/fa6";
+import { RxCross2 } from "react-icons/rx";
+
+
 
 interface SecurityCardProps {
     icon: React.ReactNode;
@@ -72,7 +76,7 @@ const SettingsSection = () => {
                     <div>
                         <p>Team</p>
                         <p>Nobody</p>
-                        <p>Choose</p>
+                        <p>Choose<FaGreaterThan /></p>
                     </div>
 
                 </div>
@@ -87,10 +91,10 @@ const SettingsSection = () => {
                     <p>Visibility</p>
                     <p>See all profiles except..</p>
 
-                <div>
-                    <p>Emma bron</p>
-                    <p>David jhonson</p>
-                </div>
+                  <div>
+                      <p>Emma bron <RxCross2 /></p>
+                      <p>David jhonson  <RxCross2 /></p>
+                  </div>
                 </div>
             </div>
 

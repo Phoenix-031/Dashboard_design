@@ -27,9 +27,6 @@ const selectedComponent = componentMap[selected.toLowerCase()];
     <div className={styles.main_section_container}>
       <TopBar />
       {selectedComponent}
-      {/* <CalendarComponent /> */}
-
-
     </div>
   )
 }

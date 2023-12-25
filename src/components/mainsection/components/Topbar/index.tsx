@@ -31,7 +31,7 @@ const TopBar = () => {
       />
 
       <div className={styles.topbar_icons_container}>
-        <LuBellRing />
+        <span><LuBellRing /></span>
         <LuArrowRightSquare />
       </div>
     </div>

@@ -112,6 +112,8 @@
             align-items: baseline;
             width: 100%;
             padding: 1rem;
+            border: 1px solid gray;
+            border-width: 0 0 1px 0;
 
             &>div:first-child {
                 font-size: 1.2rem;
@@ -119,8 +121,8 @@
             }
 
             &>.privatemessage_card_section {
-                border: 1px solid gray;
-                border-width: 0 0 1px 0;
+                // border: 1px solid gray;
+                // border-width: 0 0 1px 0;
                 flex: 12;
                 display: flex;
                 justify-content: flex-start;
@@ -143,6 +145,10 @@
                         border: 1px solid gray;
                         padding: 0.2rem 0.8rem;
                         border-radius: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
                     }
                 }
             }
@@ -154,6 +160,9 @@
             align-items: baseline;
             width: 100%;
             padding: 1rem;
+            border: 3px solid gray;
+            // border-width: 0 0 1px 0;
+
 
             &>div:first-child {
                 font-size: 1.5rem;
@@ -161,8 +170,6 @@
             }
 
             &>.visibility_card_section {
-                border: 1px solid gray;
-                border-width: 0 0 1px 0;
                 flex: 12;
                 display: flex;
                 justify-content: flex-start;
@@ -177,9 +184,13 @@
                     padding: 0.5rem 0;
 
                     &>p {
-                        border: 1px solid gray;
+                        // border: 1px solid gray;
                         padding: 0.2rem 0.8rem;
                         border-radius: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.3rem;
                     }
                 }
 
