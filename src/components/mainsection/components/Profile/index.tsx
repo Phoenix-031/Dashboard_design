@@ -1,7 +1,8 @@
+import styles from './style.module.scss'
 
 const ProfileComponent = () => {
   return (
-    <div>ProfileComponent</div>
+    <div className={styles.main_container}>ProfileComponent</div>
   )
 }
 

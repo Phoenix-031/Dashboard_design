@@ -1,7 +1,8 @@
+import styles from './style.module.scss'
 
 const OffersComponent = () => {
   return (
-    <div>OffersComponent</div>
+    <div className={styles.main_container}>OffersComponent</div>
   )
 }
 

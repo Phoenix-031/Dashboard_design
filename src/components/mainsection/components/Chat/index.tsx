@@ -1,7 +1,10 @@
 
+import styles from './style.module.scss'
+
+
 const ChatComponent = () => {
   return (
-    <div>ChatComponent</div>
+    <div className={styles.main_container}>ChatComponent</div>
   )
 }
 

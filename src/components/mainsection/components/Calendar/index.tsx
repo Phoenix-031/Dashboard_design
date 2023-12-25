@@ -1,7 +1,9 @@
 
+import styles from './style.module.scss'
+
 const CalendarComponent = () => {
   return (
-    <div>CalendarComponent</div>
+    <div className={styles.main_container}>CalendarComponent</div>
   )
 }
 
