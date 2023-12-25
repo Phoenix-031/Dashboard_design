@@ -38,10 +38,26 @@
     }
 }
 
-@include sm {
+@include xs {
     .topbar_main_container {
         &>.topbar_searchicon_container {
             font-size: 1rem;
+        }
+
+        &>.topbar_search_field {
+            padding: 0.3rem;
+        }
+
+        &>.topbar_icons_container {
+            font-size: 1rem;
+        }
+    }
+}
+
+@include sm {
+    .topbar_main_container {
+        &>.topbar_searchicon_container {
+            font-size: 1.3rem;
         }
 
         &>.topbar_search_field {
@@ -49,7 +65,7 @@
         }
 
         &>.topbar_icons_container {
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
     }
 }

@@ -12,70 +12,70 @@ $breakpoints: (
 );
 
 @mixin xs {
-    @media (max-width : map-get($breakpoints, "xs")) {
+    @media only screen and (max-width : map-get($breakpoints, "xs")) {
         @content;
 
     }
 }
 
 @mixin sm {
-    @media (max-width : map-get($breakpoints, "sm")) {
+    @media only screen and (max-width : map-get($breakpoints, "sm")) {
         @content;
 
     }
 }
 
 @mixin mobile {
-    @media (max-width : map-get($breakpoints, "mobile")) {
+    @media only screen and (max-width : map-get($breakpoints, "mobile")) {
         @content;
 
     }
 }
 
 @mixin tablet {
-    @media (max-width : map-get($breakpoints, "tablet")) {
+    @media only screen and (max-width : map-get($breakpoints, "tablet")) {
         @content;
 
     }
 }
 
 @mixin desktop {
-    @media (max-width : map-get($breakpoints, "desktop")) {
+    @media only screen and (max-width : map-get($breakpoints, "desktop")) {
         @content;
 
     }
 }
 
 @mixin large {
-    @media (max-width : map-get($breakpoints, "large")) {
+    @media only screen and (max-width : map-get($breakpoints, "large")) {
         @content;
 
     }
 }
 
 @mixin xlarge {
-    @media (max-width : map-get($breakpoints, "xlarge")) {
+    @media only screen and (max-width : map-get($breakpoints, "xlarge")) {
         @content;
 
     }
 }
 
 @mixin xxlarge {
-    @media (max-width : map-get($breakpoints, "xxlarge")) {
+    @media only screen and (max-width : map-get($breakpoints, "xxlarge")) {
         @content;
 
     }
 }
 
 @mixin xxxlarge {
-    @media (max-width : map-get($breakpoints, "xxxlarge")) {
+    @media only screen and (max-width : map-get($breakpoints, "xxxlarge")) {
         @content;
 
     }
 }
 
 @mixin breakpoint($bp : 0) {
-    @media (max-width : $bp) {
+    @media only screen and (max-width : $bp) {
         @content;
     }
 }

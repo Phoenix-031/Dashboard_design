@@ -64,12 +64,12 @@ const SettingsSection = () => {
 
       <div className={styles.settings_session_section}>
         <SessionCard icon={<FaApple />} title="IOS" platform="Top platform" sessions={14} />
-        <SessionCard icon={<FaSafari />} title="Safari" platform="Top platform" sessions={14} />
+        <SessionCard icon={<FaSafari />} title="Safari" platform="Top platform" sessions={35} />
         <SessionCard
           icon={<IoLogoStackoverflow />}
           title="Stackoverflow"
           platform="Top platform"
-          sessions={14}
+          sessions={16}
         />
       </div>
     </div>

@@ -13,22 +13,26 @@
     color: $tertiary;
 }
 
-@include sm {
+@include large {
     .main_section_container {
-        border: 1px solid green;
-        grid-column: 1/13;
+        grid-column: 4/13;
     }
-
 }
 
-@include mobile {
+@include desktop {
     .main_section_container {
-        grid-column: 1/13;
+        grid-column: 5/13;
     }
 }
 
 @include tablet {
     .main_section_container {
         grid-column: 5/13;
+    }
+}
+
+@include mobile {
+    .main_section_container {
+        grid-column: 1/2;
     }
 }

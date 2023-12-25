@@ -12,7 +12,7 @@
 
     &>.security_sectionone {
         padding: 1rem;
-        // border: 7px solid green;
+        // border: 3px solid green;
         overflow: hidden;
         height: 100%;
         width: 100%;
@@ -25,14 +25,22 @@
 
         &>div {
             // border: 1px solid blue;
-            border: 1px solid gray;
+            border: 3px solid gray;
             border-width: 0 0 1px 0;
             display: flex;
-            // justify-content: space-evenly;
+            justify-content: flex-start;
             align-items: center;
             width: 100%;
             gap: 1.2rem;
             padding: 1rem;
+
+            &>div:last-child {
+                justify-self: flex-start;
+                display: flex;
+                justify-content: flex-end;
+                // border: 1px solid green;
+                flex: 1;
+            }
 
             &>div:first-child {
                 // font-size: 1rem;

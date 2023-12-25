@@ -57,7 +57,8 @@
         width: 100%;
         // border: 1px solid red;
         overflow-x: scroll;
-        overflow-y: hidden;
+        height: max-content;
+        // overflow-y: hidden;
         gap: 1rem;
         margin-bottom: 1rem;
     }
