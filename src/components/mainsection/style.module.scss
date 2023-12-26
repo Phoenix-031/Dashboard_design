@@ -12,9 +12,24 @@
     color: $tertiary;
 }
 
+@include xxxlarge {
+    .main_section_container {
+        grid-column: 4/13;
+        font-size: 1.5rem;
+    }
+}
+
+@include xxlarge {
+    .main_section_container {
+        grid-column: 4/13;
+        font-size: 1.2rem;
+    }
+}
+
 @include large {
     .main_section_container {
         grid-column: 4/13;
+        font-size: 1rem;
     }
 }
 
@@ -33,5 +48,6 @@
 @include mobile {
     .main_section_container {
         grid-column: 1/13;
+        font-size: 0.9rem;
     }
 }

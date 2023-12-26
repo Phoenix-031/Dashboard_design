@@ -221,6 +221,13 @@
 
 }
 
+@include desktop {
+    .security_maincontainer {
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
 @include sm {
     .security_maincontainer {
         &>.security_sectionone {
@@ -246,12 +253,5 @@
                 }
             }
         }
-    }
-}
-
-@include desktop {
-    .security_maincontainer {
-        flex: 1;
-        flex-direction: column;
     }
 }

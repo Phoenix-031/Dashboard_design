@@ -55,18 +55,44 @@
     }
 }
 
-@include xs {
+@include xxxlarge {
     .topbar_main_container {
         &>.topbar_searchicon_container {
-            font-size: 1rem;
+            font-size: 2rem;
         }
 
         &>.topbar_search_field {
-            padding: 0.3rem;
+            padding: 1.2rem;
         }
 
         &>.topbar_icons_container {
-            font-size: 1rem;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include xxlarge {
+    .topbar_main_container {
+        &>.topbar_searchicon_container {
+            font-size: 1.7rem;
+        }
+
+        &>.topbar_search_field {
+            padding: 1rem;
+        }
+
+        &>.topbar_icons_container {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include mobile {
+    .topbar_main_container {
+        &>.topbar_searchicon_container {
+            &>p:first-child {
+                display: block;
+            }
         }
     }
 }
@@ -87,12 +113,19 @@
     }
 }
 
-@include mobile {
+
+@include xs {
     .topbar_main_container {
         &>.topbar_searchicon_container {
-            &>p:first-child {
-                display: block;
-            }
+            font-size: 1rem;
+        }
+
+        &>.topbar_search_field {
+            padding: 0.3rem;
+        }
+
+        &>.topbar_icons_container {
+            font-size: 1rem;
         }
     }
 }

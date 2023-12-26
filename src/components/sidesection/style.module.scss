@@ -47,13 +47,17 @@
                 font-weight: 600;
                 font-size: 1.5rem;
 
-                @include xxlarge {
-                    font-size: 1.8rem;
-                }
+                // @include xxlarge {
+                //     font-size: 1.8rem;
+                // }
 
-                @include sm {
-                    font-size: 1.2rem;
-                }
+                // @include xxlarge {
+                //     font-size: 1.8rem;
+                // }
+
+                // @include sm {
+                //     font-size: 1.2rem;
+                // }
             }
         }
 
@@ -228,7 +232,101 @@
     }
 }
 
+@include xxxlarge {
+    .sidebar_container {
+        grid-column: 1/4;
 
+        &>.sidebar_heading {
+
+            &>div>span {
+                font-size: 2rem;
+            }
+        }
+
+        &>.sidebar_userinfo {
+
+            &>.sidebar_userinfo_imgcontainer {
+                &>img {
+                    width: 6.5rem;
+                }
+            }
+
+            &>span {
+                font-size: 1.5rem;
+            }
+        }
+
+        &>.sidebar_menu {
+            padding-left: 2rem;
+
+            &>li {
+                font-size: 1.5rem;
+            }
+        }
+
+        &>.sidebar_community_section_container {
+            &>.sidebar_community_members {
+                &>img {
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                &>div:last-child {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+    }
+}
+
+@include xxlarge {
+    .sidebar_container {
+        grid-column: 1/4;
+
+        &>.sidebar_heading {
+
+            &>div>span {
+                font-size: 1.5rem;
+            }
+        }
+
+        &>.sidebar_userinfo {
+
+            &>.sidebar_userinfo_imgcontainer {
+                &>img {
+                    width: 6rem;
+                }
+            }
+
+            &>span {
+                font-size: 1.2rem;
+            }
+        }
+
+        &>.sidebar_menu {
+            padding-left: 1.5rem;
+
+            &>li {
+                font-size: 1.3rem;
+            }
+        }
+
+        &>.sidebar_community_section_container {
+            &>.sidebar_community_members {
+                &>img {
+                    width: 2.5;
+                    height: 2.5;
+                }
+
+                &>div:last-child {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+    }
+}
 
 @include large {
     .sidebar_container {
@@ -259,8 +357,47 @@
         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
         &>.sidebar_heading {
+
+            &>div>span {
+                font-size: 1.5rem;
+            }
+
             &>p {
                 display: block;
+            }
+        }
+
+        &>.sidebar_userinfo {
+
+            &>.sidebar_userinfo_imgcontainer {
+                &>img {
+                    width: 4.5rem;
+                }
+            }
+
+            &>span {
+                font-size: 1.1rem;
+            }
+        }
+
+        &>.sidebar_menu {
+            padding-left: 1rem;
+
+            &>li {
+                font-size: 1.2rem;
+            }
+        }
+
+        &>.sidebar_community_section_container {
+            &>.sidebar_community_members {
+                &>img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+
+                &>div:last-child {
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -268,8 +405,45 @@
 
 @include sm {
     .sidebar_container {
-        &>.toggle {
-            width: 60%;
+
+        &>.sidebar_heading {
+
+            &>div>span {
+                font-size: 1.2rem;
+            }
+
+            &>p {
+                display: block;
+            }
+        }
+
+        &>.sidebar_userinfo {
+
+            &>.sidebar_userinfo_imgcontainer {
+                &>img {
+                    width: 4rem;
+                }
+            }
+
+            &>span {
+                font-size: 1rem;
+            }
+        }
+
+        &>.sidebar_menu {
+            padding-left: 1rem;
+
+            &>li {
+                font-size: 1rem;
+            }
+        }
+
+        &>.sidebar_menu {
+            padding-left: 0.5rem;
+
+            &>li {
+                font-size: 1rem;
+            }
         }
     }
 }

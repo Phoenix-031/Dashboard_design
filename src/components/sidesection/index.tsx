@@ -70,10 +70,10 @@ const SideSection = () => {
 const SidebarHeading = () => (
   <div className={styles.sidebar_heading}>
     <div>
-    <div>
-      <GrTechnology />
-    </div>
-    <span>TechHazel</span>
+      <div>
+        <GrTechnology />
+      </div>
+      <span>TechHazel</span>
     </div>
   </div>
 );
