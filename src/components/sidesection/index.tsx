@@ -8,11 +8,8 @@ import { SlCalender } from "react-icons/sl";
 import { TbCardsFilled } from "react-icons/tb";
 import { IoSettings } from "react-icons/io5";
 import { IoAddCircle } from "react-icons/io5";
-// import { CiLogout } from "react-icons/ci";
 import { GrTechnology } from "react-icons/gr";
 import { FaStar } from "react-icons/fa";
-
-
 
 //library imports
 import { useContext } from 'react';
@@ -28,7 +25,6 @@ import profile5 from '@assets/profile5.png'
 import { AppContext, AppContextType } from '@/context/AppContext';
 
 //interface
-
 interface SidebarMenuItemProps {
     icon: React.ReactNode;
     label: string;
@@ -53,8 +49,6 @@ const SideSection = () => {
         <div className={`${styles.sidebar_container} 
                          ${toggle ? styles['toggle']: ''}`
                         }>
-            {/* <Backdrop /> */}
-
             <SidebarHeading />
             <UserInfo userName="Catherine Reed" role="Admin" userIcon={userIcon} />
 
@@ -131,18 +125,5 @@ const SidebarCommunitySection = () => {
     <p className={styles.sidebar_community_section_text}>Find new members in our community</p>
   </div>
 )};
-
-// export const Backdrop: React.FC = () => {
-//   const { toggle, setToggle } = useContext(AppContext) as AppContextType;
-
-//   const handleBackdropClick = () => {
-//     if (toggle) {
-//       setToggle(false);
-//     }
-//   };
-
-//   return toggle ? <div className={backdropstyle.backdrop} onClick={handleBackdropClick}></div> : null;
-// };
-
 
 export default SideSection
