@@ -13,7 +13,7 @@ import { RiChatPrivateFill } from "react-icons/ri";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaGreaterThan } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
-
+// import Switch from '@/global_ui/Switch/Switch';
 
 
 interface SecurityCardProps {
@@ -33,6 +33,7 @@ const SecurityCard = ({ icon, title, description, switchChecked, onSwitchChange 
     </div>
     <div>
       <Switch defaultChecked={switchChecked} onChange={onSwitchChange} />
+      {/* <Switch /> */}
     </div>
   </div>
 );

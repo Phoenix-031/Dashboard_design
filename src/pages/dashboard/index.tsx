@@ -34,7 +34,7 @@ const Backdrop = () => {
     }
   };
 
-  return toggle ? <div className={backdropstyle.backdrop} onClick={handleBackdropClick}></div> : null;
+  return <div className={`${backdropstyle.backdrop} ${toggle ? backdropstyle['open'] : ''}`} onClick={handleBackdropClick}></div>;
 };
 
 

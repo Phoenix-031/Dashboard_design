@@ -8,5 +8,12 @@
     background-color: rgba(0, 0, 0, 0.5);
     /* Semi-transparent black */
     z-index: 90;
-    /* Make sure the backdrop is above other elements */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
+
+    &.open {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
