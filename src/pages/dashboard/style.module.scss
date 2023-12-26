@@ -11,13 +11,6 @@
     overflow: hidden;
 }
 
-@include mobile {
-    .main_container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 @include sm {
     .main_container {
         font-size: 0.8rem;
