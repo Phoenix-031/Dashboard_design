@@ -59,14 +59,18 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 0.5rem;
+        padding: 0 0.6rem;
         width: 100%;
-        // border: 1px solid red;
+        border: 1px solid red;
         overflow-x: scroll;
         height: max-content;
         // overflow-y: hidden;
-        gap: 1rem;
-        margin-bottom: 1rem;
+        gap: 0.8rem;
+        margin-bottom: 0.6rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 }
 
