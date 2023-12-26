@@ -182,14 +182,22 @@
                 align-items: baseline;
                 flex-direction: column;
                 gap: 0.3rem;
+                overflow-x: hidden;
+                padding: 0.5rem 0.5rem;
                 // border: 1px solid red;
 
                 &>div {
                     display: flex;
                     gap: 0.5rem;
                     padding: 0.5rem 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    overflow-x: auto;
+                    // border: 1px solid red;
+                    width: 100%;
 
-                    &>p {
+                    &>p:not(:last-child) {
                         border: 1px solid gray;
                         padding: 0.2rem 0.8rem;
                         border-radius: 1rem;
@@ -198,7 +206,22 @@
                         align-items: center;
                         gap: 0.3rem;
                         font-size: 0.9rem;
+                        min-width: max-content;
+
+                        @include xs {
+                            font-size: 0.8rem;
+                        }
                     }
+
+                    &>p:last-child {
+                        color: gray;
+                        font-size: 0.9rem;
+                        min-width: max-content;
+                    }
+                }
+
+                &>div::-webkit-scrollbar {
+                    display: none;
                 }
 
             }

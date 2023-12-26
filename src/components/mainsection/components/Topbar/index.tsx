@@ -10,7 +10,6 @@ const TopBar = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
 
   return (

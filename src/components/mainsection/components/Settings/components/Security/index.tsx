@@ -40,7 +40,8 @@ const SecurityCard = ({ icon, title, description, switchChecked, onSwitchChange 
 
 const SettingsSection = () => {
   const onChange = (checked: boolean) => {
-    console.log(`switch to ${checked}`);
+    // console.log(`switch to ${checked}`);
+    console.log(checked);
   };
 
   return (
@@ -95,6 +96,7 @@ const SettingsSection = () => {
                   <div>
                       <p>Emma bron <RxCross2 /></p>
                       <p>David jhonson  <RxCross2 /></p>
+                      <p>and 54 users..</p>
                   </div>
                 </div>
             </div>
