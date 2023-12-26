@@ -221,6 +221,122 @@
 
 }
 
+@include xxxlarge {
+    .security_maincontainer {
+        &>.security_sectionone {
+            font-size: 1.4rem;
+        }
+
+        &>.security_sectiontwo {
+            font-size: 1.4rem;
+
+            &>.privatemessage_card {
+                &>.privatemessage_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+
+            &>.visibility_card {
+                &>.visibility_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include xxlarge {
+    .security_maincontainer {
+        &>.security_sectionone {
+            font-size: 1.3rem;
+        }
+
+        &>.security_sectiontwo {
+            font-size: 1.3rem;
+
+            &>.privatemessage_card {
+                &>.privatemessage_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+
+            &>.visibility_card {
+                &>.visibility_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include xlarge {
+    .security_maincontainer {
+        &>.security_sectionone {
+            font-size: 1.2rem;
+        }
+
+        &>.security_sectiontwo {
+            font-size: 1.2rem;
+
+            &>.privatemessage_card {
+                &>.privatemessage_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+
+            &>.visibility_card {
+                &>.visibility_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include large {
+    .security_maincontainer {
+        &>.security_sectionone {
+            font-size: 1rem;
+        }
+
+        &>.security_sectiontwo {
+            font-size: 1rem;
+
+            &>.privatemessage_card {
+                &>.privatemessage_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+
+            &>.visibility_card {
+                &>.visibility_card_section {
+                    &>div {
+                        gap: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 @include desktop {
     .security_maincontainer {
         flex: 1;
