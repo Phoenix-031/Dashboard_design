@@ -10,19 +10,16 @@
     border: 1rem;
     background-color: $secondary;
     gap: 0.5rem;
-    // border: 1px solid red;
     border-radius: 0.9rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
     &>div:first-child {
         font-size: 2rem;
-        // border: 1px solid red;
     }
 
 
 
     &>.content_container {
-        // border: 1px solid red;
         display: flex;
         justify-content: space-between;
         align-items: center;

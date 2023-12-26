@@ -2,11 +2,11 @@ import { useContext } from 'react';
 import { IoSearch } from 'react-icons/io5';
 import { LuBellRing, LuArrowRightSquare } from 'react-icons/lu';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
+import { AppContext, AppContextType } from '@/context/AppContext';
 import styles from './style.module.scss';
 
 const TopBar = () => {
-  const { toggle, setToggle } = useContext(ToggleContext) as ToggleContextType;
+  const { toggle, setToggle } = useContext(AppContext) as AppContextType;
 
   const toggleMenu = () => {
     setToggle(!toggle);

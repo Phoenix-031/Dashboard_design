@@ -2,7 +2,6 @@
 @import '../../../../../../styles/colors';
 
 .security_maincontainer {
-    // border: 1px solid red;
     flex: 8;
     width: 100%;
     display: flex;
@@ -12,7 +11,6 @@
 
     &>.security_sectionone {
         padding: 1rem;
-        // border: 3px solid green;
         overflow: hidden;
         height: 100%;
         width: 100%;
@@ -24,7 +22,6 @@
         font-size: 1rem;
 
         &>div {
-            // border: 1px solid blue;
             border: 3px solid gray;
             border-width: 0 0 1px 0;
             display: flex;
@@ -38,14 +35,12 @@
                 justify-self: flex-start;
                 display: flex;
                 justify-content: flex-end;
-                // border: 1px solid green;
                 flex: 1;
             }
 
             &>div:first-child {
                 // font-size: 1rem;
                 align-content: baseline;
-                // border: 1px solid red;
                 height: 100%;
             }
 
@@ -57,7 +52,6 @@
     }
 
     &>.security_sectiontwo {
-        // border: 1px solid blue;
         width: 100%;
         height: 100%;
         flex: 1;
@@ -101,7 +95,6 @@
 
                 &>p {
                     font-family: Poppins, sans-serif;
-                    // font-size: 1rem;
                 }
             }
         }
@@ -121,8 +114,6 @@
             }
 
             &>.privatemessage_card_section {
-                // border: 1px solid gray;
-                // border-width: 0 0 1px 0;
                 flex: 12;
                 display: flex;
                 justify-content: flex-start;
@@ -168,9 +159,8 @@
             &>div:first-child {
                 font-size: 1.4rem;
                 flex: 1;
-                // border: 1px solid red;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: baseline;
                 height: 100%;
             }
@@ -184,7 +174,6 @@
                 gap: 0.3rem;
                 overflow-x: hidden;
                 padding: 0.5rem 0.5rem;
-                // border: 1px solid red;
 
                 &>div {
                     display: flex;
@@ -194,7 +183,6 @@
                     justify-content: flex-start;
                     align-items: center;
                     overflow-x: auto;
-                    // border: 1px solid red;
                     width: 100%;
 
                     &>p:not(:last-child) {

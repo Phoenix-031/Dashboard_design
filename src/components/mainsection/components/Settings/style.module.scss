@@ -1,7 +1,6 @@
 @import '../../../../styles/colors';
 
 .settings_main_container {
-    // border: 5px solid green;
     flex: 12;
     width: 100%;
     display: flex;
@@ -23,7 +22,6 @@
     }
 
     &>.settings_base_section {
-        // border: 6px solid black;
         width: 100%;
         font-family: Poppins, sans-serif;
         flex: 9;
@@ -39,12 +37,15 @@
             justify-content: flex-start;
             align-items: center;
             padding: 1.5rem;
-            // flex: 2;
-            // border: 1px solid red;
             width: 100%;
 
             &>li {
                 cursor: pointer;
+            }
+
+            &>li:hover {
+                color: gray;
+                transition: color 0.2s ease-in-out;
             }
 
             &>li:nth-child(2) {
@@ -61,7 +62,6 @@
         align-items: center;
         padding: 0 0.6rem;
         width: 100%;
-        // border: 1px solid red;
         overflow-x: scroll;
         height: max-content;
         // overflow-y: hidden;
@@ -73,9 +73,3 @@
         }
     }
 }
-
-// @include tablet{
-//     .settings_main_container{
-//         width: 100%;
-//     }
-// }

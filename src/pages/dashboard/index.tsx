@@ -8,25 +8,25 @@ import SideSection from '@/components/sidesection'
 import styles from './style.module.scss'
 import backdropstyle from './backdrop.module.scss'
 
-import { ToggleContext, ToggleContextType } from '@/context/ToggleContext'
+import { AppContext, AppContextType } from '@/context/AppContext'
 
 //context provider
-import ToggleContextProvider from '@/context/ToggleContext'
+import AppContextProvider from '@/context/AppContext'
 
 const Dashboard = () => {
   return (
     <div className={styles.main_container}>
-      <ToggleContextProvider>
+      <AppContextProvider>
           <SideSection />
           <MainSection />
           <Backdrop />
-      </ToggleContextProvider>
+      </AppContextProvider>
     </div>
   )
 }
 
 const Backdrop = () => {
-  const { toggle, setToggle } = useContext(ToggleContext) as ToggleContextType;
+  const { toggle, setToggle } = useContext(AppContext) as AppContextType;
 
   const handleBackdropClick = () => {
     if (toggle) {

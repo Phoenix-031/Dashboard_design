@@ -8,7 +8,7 @@ import { SlCalender } from "react-icons/sl";
 import { TbCardsFilled } from "react-icons/tb";
 import { IoSettings } from "react-icons/io5";
 import { IoAddCircle } from "react-icons/io5";
-import { CiLogout } from "react-icons/ci";
+// import { CiLogout } from "react-icons/ci";
 import { GrTechnology } from "react-icons/gr";
 import { FaStar } from "react-icons/fa";
 
@@ -25,7 +25,7 @@ import profile2 from '@assets/profile2.png'
 import profile3 from '@assets/profile3.png'
 import profile5 from '@assets/profile5.png'
 
-import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
+import { AppContext, AppContextType } from '@/context/AppContext';
 
 //interface
 
@@ -38,10 +38,6 @@ interface SidebarMenuItemProps {
     setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-interface SidebarHeadingProps {
-    onLogout: () => void;
-}
-
 interface UserInfoProps {
     userName: string;
     role: string;
@@ -50,7 +46,7 @@ interface UserInfoProps {
 
 const SideSection = () => {
 
-    const {toggle,setToggle,selected,setSelected}= useContext(ToggleContext) as ToggleContextType
+    const {toggle,setToggle,selected,setSelected}= useContext(AppContext) as AppContextType
 
   return (
 
@@ -59,7 +55,7 @@ const SideSection = () => {
                         }>
             {/* <Backdrop /> */}
 
-            <SidebarHeading onLogout={() => setToggle(false)} />
+            <SidebarHeading />
             <UserInfo userName="Catherine Reed" role="Admin" userIcon={userIcon} />
 
             <ul className={styles.sidebar_menu}>
@@ -77,7 +73,7 @@ const SideSection = () => {
   )
 }
 
-const SidebarHeading = ({ onLogout } : SidebarHeadingProps) => (
+const SidebarHeading = () => (
   <div className={styles.sidebar_heading}>
     <div>
     <div>
@@ -85,9 +81,6 @@ const SidebarHeading = ({ onLogout } : SidebarHeadingProps) => (
     </div>
     <span>TechHazel</span>
     </div>
-    <p onClick={onLogout}>
-      <CiLogout />
-    </p>
   </div>
 );
 
@@ -114,7 +107,7 @@ const SidebarMenuItem = ({ icon, label, setSelected,selected, toggle,setToggle }
     {icon}
     <span 
     style={{
-        color: selected === label ? '#444BB6' : 'black',
+        color: selected === label ? '#444BB6' : 'inherit',
       }}>
         {label}
     </span>
@@ -140,7 +133,7 @@ const SidebarCommunitySection = () => {
 )};
 
 // export const Backdrop: React.FC = () => {
-//   const { toggle, setToggle } = useContext(ToggleContext) as ToggleContextType;
+//   const { toggle, setToggle } = useContext(AppContext) as AppContextType;
 
 //   const handleBackdropClick = () => {
 //     if (toggle) {

@@ -51,7 +51,7 @@ const SettingsSection = () => {
               key={item}
               onClick={() => setSelected(item)}
               style={{
-                color: selected === item ? '#444BB6' : 'black',
+                color: selected === item ? '#444BB6' : 'inherit',
               }}
             >
               {item}

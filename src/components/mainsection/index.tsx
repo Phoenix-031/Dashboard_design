@@ -7,11 +7,11 @@ import TopBar from './components/Topbar'
 import styles from './style.module.scss'
 import CalendarComponent from './components/Calendar';
 import OffersComponent from './components/Offers';
-import { ToggleContext, ToggleContextType } from '@/context/ToggleContext';
+import { AppContext, AppContextType } from '@/context/AppContext';
 
 const MainSection = () => {
 
-  const {selected} = useContext(ToggleContext) as ToggleContextType;
+  const {selected} = useContext(AppContext) as AppContextType;
 
   const componentMap: { [key: string]: React.ReactNode } = {
     profile: <ProfileComponent />,

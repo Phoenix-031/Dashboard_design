@@ -2,7 +2,6 @@
 @import '../../styles/colors';
 
 .main_section_container {
-    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,7 +33,5 @@
 @include mobile {
     .main_section_container {
         grid-column: 1/13;
-        // border: 5px solid red;
-        // background-color: red;
     }
 }
